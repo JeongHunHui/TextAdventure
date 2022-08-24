@@ -1,0 +1,4 @@
+repository "용사의 기억@Deca@cloud"
+  path "/"
+    br "/main"
+    co "/main"

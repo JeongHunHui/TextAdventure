@@ -1,0 +1,12 @@
+PeddlerSell|활|1
+PeddlerSell|빛의 망치|1
+PeddlerSell|미스릴 투구|1
+PeddlerSell|미스릴 갑옷|1
+PeddlerSell|미스릴 장화|1
+PeddlerSell|진주 목걸이|1
+PeddlerSell|가죽 가방|1
+PeddlerSell|커피콩|5
+PeddlerBuy|사과|2
+PeddlerBuy|생고기|2
+PeddlerBuy|약초|2
+PeddlerBuy|슬라임 젤리|10

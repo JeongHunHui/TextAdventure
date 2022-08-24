@@ -1,0 +1,26 @@
+Prolog1SL|Prolog1|쿨쿨..|True|&Prolog1
+Prolog2SL|Prolog2|윽..|True|&Prolog2
+Prolog3SL|Prolog3|이게 무슨..|True|&Prolog3
+NextSL|Next|다음|True|NewEvent
+PeddlerMeetSL|PeddlerTrade|거래를 한다.|True|&PeddlerTrade
+PeddlerMeetSL|PeddlerIg|거래를 하지 않는다.|True|&PeddlerIg
+PeddlerTradeSL|PeddlerTradeGo|물품을 본다.|True|{떠돌이 행상인}ActiveTradePannel
+RockRestSL|RockRest|잠시 휴식을 취한다.|True|?{1/3}RandomTF>{1}SetHP+&RockRestS`?{1/2}RandomTF>{사과}AddItem+&RockRestApple`{-1}SetMental+&RockRestBug
+RockRestSL|KeepGoing|쉬지 않는다.|True|&RockRestF
+SmokeFindSL|SmokeCare|조심히 다가가본다.|True|{SmokeCare}RandomEvent
+SmokeFindSL|SmokeFast|빠르게 다가가본다.|True|{SmokeFast}RandomEvent
+SmokeFindSL|SmokeIg|연기를 무시한다.|True|&SmokeIg
+HunterFindSL|HunterTalk|말을 걸어본다.|True|?{0}FameO>{생고기}AddItem+{1}SetHP+{1}SetMental+&HunterTalkS`&HunterTalkF
+HunterFindSL|HunterBlitz|기습한다.|True|?{활}ItemO*{화살}ItemO*{궁술,1}AbilityO>{-5}SetFame+{생고기}AddItem+{300}SetGold+&HunterBlitzS2`?{활}ItemO*{화살}ItemO*{1/2}RandomTF>{-5}SetFame+{생고기}AddItem+{300}SetGold+&HunterBlitzS`?{활}ItemO*{화살}ItemO>&HunterBlitzF`&HunterBlitzF2
+HunterFindSL|HunterIg|사냥꾼을 무시한다.|True|&HunterIg
+CabinSL|KnockCabin|문을 두드려본다.|True|&InsideS
+CabinSL|CabinIg|그냥 간다.|True|&CabinIg
+CabinInSL|SoupEat|스프를 먹는다.|True|?{3/4}RandomTF>{1}SetHP+{1}SetMental+&SoupS`?{튼튼한 위장,1}AbilityO>{1}SetHP+{1}SetMental+&SoupS2`{-1}SetHP+{-300}SetGold+{튼튼한 위장,1}AddAbility+&SoupF
+CabinInSL|SoupIg|스프를 먹지 않는다.|True|&SoupF
+CabinInSL|CabinBlitz|할머니를 기습한다.|True|{-5}SetFame+{생고기}AddItem+{약초}AddItem+{400}SetGold+&CabinBlitz
+GameOverSL|GameOver|다시 시작하기|True|NewGame
+CaveEnterSL|CaveEnter|동굴에 들어가본다.|True|?{1/2}RandomTF>&CaveCombat`{약초}AddItem+&CaveS
+CaveEnterSL|CaveIg|동굴을 지나친다.|True|&CaveIg
+CaveCombatSL|CaveCombat|슬라임과 싸운다!|True|{슬라임,CaveCombatVic,CaveCombatDefeat,CaveCombatDraw}ActiveCombatPannel
+CaveCombatVicSL|CaveCombatVic|전리품을 획득한다!|True|{슬라임 젤리}AddItem+{200}SetGold+NewEvent
+CaveCombatDefeatSL|CaveCombatDefeat|아잇!|True|{-1}SetHP+NewEvent
